@@ -87,10 +87,10 @@ class HillClimbingAgent:
 
             # Step from the frist hit in the opposite direction.
             next_row = self.first_hit[0] + opposite[0]
-            nect_col = self.first_hit[1] + opposite[1]
+            next_col = self.first_hit[1] + opposite[1]
 
             if board.is_valid_shot(next_row,next_col):
-                return (next_row,nect_col)
+                return (next_row,next_col)
             
         # Both directions exhausted - give up this direction.
         self.current_direction = None
