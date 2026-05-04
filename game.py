@@ -72,7 +72,7 @@ def run_experiment(agent_class, num_games=500):
     worst = max(results)
 
     # Standard deviation (how spread out the results are).
-    variance = sum((x - average) **2 for x in results)
+    variance = sum((x - average) **2 for x in results) / len(results)
     std_dev = variance ** 0.5
 
     return {
