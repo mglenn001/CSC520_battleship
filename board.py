@@ -164,7 +164,7 @@ class Board:
             O = miss
         """
         # Column headers.
-        header = " " + " ".join(str(i) for i in range(BOARD_SIZE))
+        header = "  " + " ".join(str(i) for i in range(BOARD_SIZE))
         print(header)
 
         for row in range(BOARD_SIZE):
@@ -177,7 +177,7 @@ class Board:
                     if self.shots[(row, col)] == "hit":
                         row_str += "X "
                     else:
-                        row_str += "0 "
+                        row_str += "O "
                 elif show_ships and self.grid[row][col] is not None:
                     row_str += "S "
                 else:
